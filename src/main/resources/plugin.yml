@@ -1,0 +1,29 @@
+name: Scale
+version: '${project.version}'
+main: dev.kocaj.scale.ScalePlugin
+api-version: '1.21'
+description: Player scale control plugin
+authors:
+  - kocaj
+
+commands:
+  scale:
+    description: Control your player scale size
+    usage: /scale <tiny|normal|giant|number> or /scale set <player> <tiny|normal|giant>
+
+permissions:
+  scale.tiny:
+    description: Allows using /scale tiny
+    default: op
+  scale.normal:
+    description: Allows using /scale normal
+    default: op
+  scale.giant:
+    description: Allows using /scale giant
+    default: op
+  scale.custom:
+    description: Allows using /scale <number> to set an arbitrary scale value
+    default: op
+  scale.admin:
+    description: Allows using /scale set and /scale reload
+    default: op

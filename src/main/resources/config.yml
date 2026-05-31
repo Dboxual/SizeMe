@@ -1,0 +1,42 @@
+# Scale Plugin Configuration v1.3.0
+#
+# Scale limits — presets outside these bounds will be rejected at command time.
+# Note: Minecraft's vanilla client renders scale reliably up to 16.0.
+# Values above 16.0 are stored server-side but visual results may vary by client.
+
+# Minimum scale a player can be set to.
+min-scale: 0.1
+
+# Maximum scale a player can be set to.
+max-scale: 20.0
+
+# --- Presets ---
+
+# /scale tiny
+tiny-scale: 0.5
+
+# /scale normal
+normal-scale: 1.0
+
+# /scale giant
+giant-scale: 20.0
+
+# --- Disabled Worlds ---
+# Players cannot use scale commands in these worlds.
+# Players who enter a disabled world while scaled will be automatically reset to normal-scale.
+# World names are case-insensitive.
+disabled-worlds: []
+# Example:
+# disabled-worlds:
+#   - thebridge
+#   - bedwars
+
+# --- Combat Restrictions ---
+# Set disable-in-combat to true to prevent players from changing scale during PvP.
+# combat-seconds defines how long a player remains "in combat" after their last PvP hit.
+disable-in-combat: false
+combat-seconds: 15
+
+# When true, both players involved in a PvP hit are immediately reset to normal-scale.
+# Players already at normal scale receive no message. Only player-vs-player damage triggers this.
+reset-on-pvp: true
