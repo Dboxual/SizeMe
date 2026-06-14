@@ -1,6 +1,23 @@
+# Maven build output
 target/
-*.class
-*.iml
+
+# IDE
 .idea/
+*.iml
 .vscode/
-*.DS_Store
+*.code-workspace
+
+# Claude Code local project settings (machine-specific)
+.claude/
+
+# Compiled
+*.class
+out/
+cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
