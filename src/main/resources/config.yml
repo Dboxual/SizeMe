@@ -1,4 +1,4 @@
-# Scale Plugin Configuration v1.3.0
+# Scale Plugin Configuration v1.3.1
 #
 # Scale limits — presets outside these bounds will be rejected at command time.
 # Note: Minecraft's vanilla client renders scale reliably up to 16.0.
@@ -37,6 +37,16 @@ disabled-worlds: []
 disable-in-combat: false
 combat-seconds: 15
 
-# When true, both players involved in a PvP hit are immediately reset to normal-scale.
-# Players already at normal scale receive no message. Only player-vs-player damage triggers this.
+# When true, both players in a PvP hit have their scale temporarily normalized to normal-scale.
+# Their original scale is saved and automatically restored when combat expires.
+# Each hit refreshes the combat timer. Players already at normal-scale are unaffected silently.
+# Only player-vs-player damage triggers this; PvE is ignored.
 reset-on-pvp: true
+
+# Message sent to a player when they enter PvP and their size is normalized.
+# Use "" to disable. Supports & color codes.
+pvp-enter-message: "&7Your size was normalized for PvP."
+
+# Message sent to a player when combat expires and their original size is restored.
+# Use "" to disable. Supports & color codes.
+pvp-exit-message: "&7Your size has been restored."

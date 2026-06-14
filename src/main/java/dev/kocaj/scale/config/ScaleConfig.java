@@ -17,6 +17,8 @@ public class ScaleConfig {
     private boolean disableInCombat;
     private int combatSeconds;
     private boolean resetOnPvp;
+    private String pvpEnterMessage;
+    private String pvpExitMessage;
 
     public ScaleConfig(ScalePlugin plugin) {
         this.plugin = plugin;
@@ -32,9 +34,11 @@ public class ScaleConfig {
         giantScale    = plugin.getConfig().getDouble("giant-scale",   20.0);
         disabledWorlds = plugin.getConfig().getStringList("disabled-worlds")
                 .stream().map(String::toLowerCase).toList();
-        disableInCombat = plugin.getConfig().getBoolean("disable-in-combat", false);
-        combatSeconds   = plugin.getConfig().getInt("combat-seconds", 15);
-        resetOnPvp      = plugin.getConfig().getBoolean("reset-on-pvp", true);
+        disableInCombat  = plugin.getConfig().getBoolean("disable-in-combat", false);
+        combatSeconds    = plugin.getConfig().getInt("combat-seconds", 15);
+        resetOnPvp       = plugin.getConfig().getBoolean("reset-on-pvp", true);
+        pvpEnterMessage  = plugin.getConfig().getString("pvp-enter-message", "&7Your size was normalized for PvP.");
+        pvpExitMessage   = plugin.getConfig().getString("pvp-exit-message",  "&7Your size has been restored.");
     }
 
     public double getMinScale()           { return minScale; }
@@ -46,4 +50,6 @@ public class ScaleConfig {
     public boolean isDisableInCombat()    { return disableInCombat; }
     public int getCombatSeconds()         { return combatSeconds; }
     public boolean isResetOnPvp()         { return resetOnPvp; }
+    public String getPvpEnterMessage()    { return pvpEnterMessage; }
+    public String getPvpExitMessage()     { return pvpExitMessage; }
 }
