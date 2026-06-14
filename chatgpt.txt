@@ -1,0 +1,7 @@
+
+---
+[2026-06-14] BRANCH CLEANUP
+- No dev branch — already on main.
+- Final main commit: 76e1d6e (SizeMe — remove stale docs, sync pom.xml and source changes)
+- Dev deleted: N/A
+- Notes: Old token removed from remote URL; remote reset to clean HTTPS URL.
